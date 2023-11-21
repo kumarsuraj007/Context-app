@@ -1,14 +1,19 @@
-import React, {useContext} from 'react'
-import Navbar from './Components/Navbar';
-import Books from './Components/Books';
+import React from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Cart from './components/Cart'
+import Products from './components/Products'
 
-function App () {
+function App() {
   return (
-    <div className='App'>
+    <div>
       <Navbar />
-      <Books />
+      <Routes>
+        <Route path='/' element={<Products />} />
+        <Route path='/cart' element={<Cart />} />
+      </Routes>
     </div>
   )
 }
 
-export default App;
+export default App
